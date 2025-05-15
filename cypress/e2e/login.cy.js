@@ -1,4 +1,4 @@
-describe('Login', ()=>{
+describe('Imprenomina: Login de usuario', ()=>{
     it('Login de usuario'), ()=>{
         cy.visit('https://intranetpre.educacion.org/educacion/certificados/imprenominas/Scripts/login.asp'),
         cy.get('#username').type('ext.freygom'),

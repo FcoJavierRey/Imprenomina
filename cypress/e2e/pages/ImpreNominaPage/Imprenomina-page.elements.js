@@ -2,7 +2,7 @@ export class ImpreNominaElements {
   static get Menu() {
     return {
       get  NifNominilla() {
-        return cy.get('input[name="NifNominilla"]');
+        return cy.get("input#NifNominilla");
         
       },
 

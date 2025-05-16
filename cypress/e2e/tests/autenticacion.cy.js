@@ -25,8 +25,8 @@ describe(ImpreNominaData.testSuites.autenticacion, () => {
     Logger.stepNumber(4);
     Logger.step("Navegar a la página de inicio");
     ImpreNominaMethods.navigateToAutenticarOk();
-  
-  });
+
+   });
 
   it("ImpreNominas:Inicio de sesión inválido", () => {
     Logger.stepNumber(1);

@@ -20,10 +20,13 @@ static navigateToAutenticarOk() {
     ImpreNominaElements.Menu.BotonEnviaMasivo.click();
   }
 
-   static rellenarNIF() {
-    ImpreNominaElements.Menu.NifNominilla.invoke("val", ImpreNominaData.NIFData.nif1);
+   static rellenarNIF(NifNominilla) {
+    ImpreNominaElements.Menu.NifNominilla.invoke("val", NifNominilla);
   }
-
+ static signup(NifNominilla) {
+    this.rellenarNIF(NifNominilla);
+    this.clickOnContinuar();
+  }
   static verifySignedUser(username) {
     ImpreNominaElements.signedUser.should('exist');
   }  

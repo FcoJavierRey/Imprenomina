@@ -14,21 +14,21 @@ describe(ImpreNominaData.testSuites.GeneracionNominillas, () => {
     Logger.stepNumber(1);
     Logger.step("Navegar a la página de inicio de sesión");
     ImpreNominaMethods.navigateToImpreNomina();
-
     Logger.subStep("Ingresar un nombre de usuario y contraseña válidos");
     LoginMethods.insertUsername(LoginData.validCredentials.username);
-    LoginMethods.insertPassword(LoginData.validCredentials.password);  
-
-    Logger.subStep('Hacer clic en "Conectar" para iniciar sesión');
+    LoginMethods.insertPassword(LoginData.validCredentials.password);
+    Logger.subStep('Hacer clic en "Conectar" para iniciar sesión');    
     LoginMethods.clickOnLoginButton();
-    Logger.subStep("Navegar a la página de intranet");
+         
     ImpreNominaMethods.navigateToAutenticarOk();
-
-    cy.wait(10000)
-    Logger.stepNumber(2);
+      
+ 
+ // cy.origin('https://intranetpre.educacion.org/educacion/certificados/imprenominas/Scripts/login.asp',() => {
+     Logger.stepNumber(2);
     Logger.step("Introducir NIF");
-    ImpreNominaMethods.rellenarNIF();
-    
+    ImpreNominaMethods.signup(ImpreNominaData.NIFData.nif1);
+  //})
+ 
     Logger.stepNumber(3);
     Logger.step('Hacer clic en "Generar Masivo" para Sistema de Generación de Nominillas');
     ImpreNominaMethods.clickOnEnviaMasivo();

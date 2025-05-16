@@ -7,11 +7,7 @@ export class ImpreNominaMethods {
     cy.clearLocalStorage()
     cy.visit(ImpreNominaData.url);
  }
-static navigateToAutenticar() {
-    cy.clearAllCookies();
-    cy.clearLocalStorage()
-    cy.visit(ImpreNominaData.urlAutenticar);
- } 
+
 static navigateToAutenticarOk() {
     cy.visit(ImpreNominaData.url);
  } 
@@ -25,7 +21,7 @@ static navigateToAutenticarOk() {
   }
 
    static rellenarNIF() {
-    ImpreNominaElements.Menu.NifNominilla.type("val", ImpreNominaData.NIFData.nif1);
+    ImpreNominaElements.Menu.NifNominilla.invoke("val", ImpreNominaData.NIFData.nif1);
   }
 
   static verifySignedUser(username) {

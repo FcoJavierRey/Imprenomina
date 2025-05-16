@@ -11,7 +11,7 @@ describe(ImpreNominaData.testSuites.autenticacion, () => {
   it("ImpreNominas: Inicio de sesión válido", () => {
     Logger.stepNumber(1);
     Logger.step("Navegar a la página Sistema Centralizado de Autenticación");
-    ImpreNominaMethods.navigateToAutenticar();
+    ImpreNominaMethods.navigateToImpreNomina();
 
     Logger.stepNumber(2);
     Logger.step("Ingresar un nombre de usuario y contraseña válidos");

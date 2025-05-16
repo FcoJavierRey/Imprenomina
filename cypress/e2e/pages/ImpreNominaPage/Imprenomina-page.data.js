@@ -1,9 +1,5 @@
 export class ImpreNominaData {
-  static get urlAutenticar() {
-    return "https://intranetpre.educacion.org/educacion/certificados/imprenominas/Scripts/login.asp";
-  };
-
-static get urlAutenticarOk() {
+ static get urlAutenticarOk() {
     return "https://intranetpre.educacion.org";
   };
 
@@ -25,21 +21,6 @@ static get url() {
       nif1: "42821962X",
       nif2: "54045773M",
       nif3: "42821962X, 54045773M",
-    };
-  }
-}
-
-export class ImpreNominaData {
-  static get url() {
-    return "https://intranetpre.educacion.org/educacion/certificados/imprenominas/Scripts/login.asp";
-  }
-
-  static get testSuites() {
-    return {
-      registro: "Registro",
-      autenticacion: "Autenticación",
-      ImpresionNominillas: "Impresión de Nominillas",
-      GeneracionNominillas: "Sistema de Generación de Nominillas",
     };
   }
 }

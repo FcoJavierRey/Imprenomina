@@ -10,13 +10,24 @@ import { Logger } from "../util/logger";
 
 describe(ImpreNominaData.testSuites.GeneracionNominillas, () => {
     it("ImpreNominas: Sistema de Generación de Nominillas Masivo", () => {
+      
     Logger.stepNumber(1);
-    Logger.step("Navegar a la página de Selección de Personal");
-    ImpreNominaMethods.verifySignedUser(LoginData.validCredentials.username);
+    Logger.step("Navegar a la página de inicio de sesión");
+    ImpreNominaMethods.navigateToImpreNomina();
 
+    Logger.subStep("Ingresar un nombre de usuario y contraseña válidos");
+    LoginMethods.insertUsername(LoginData.validCredentials.username);
+    LoginMethods.insertPassword(LoginData.validCredentials.password);  
+
+    Logger.subStep('Hacer clic en "Conectar" para iniciar sesión');
+    LoginMethods.clickOnLoginButton();
+    Logger.subStep("Navegar a la página de intranet");
+    ImpreNominaMethods.navigateToAutenticarOk();
+
+    cy.wait(10000)
     Logger.stepNumber(2);
     Logger.step("Introducir NIF");
-    ImpreNominaMethods.rellenarNIF(ImpreNominaData.NIFData.nif1);
+    ImpreNominaMethods.rellenarNIF();
     
     Logger.stepNumber(3);
     Logger.step('Hacer clic en "Generar Masivo" para Sistema de Generación de Nominillas');

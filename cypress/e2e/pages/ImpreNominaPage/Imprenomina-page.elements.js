@@ -18,7 +18,7 @@ export class ImpreNominaElements {
   }
   
 static get signedUser() {
-    return cy.get('td.Titular-doc');
+    return cy.contains('a', 'Inicio');
   }
 
   static get invalidUser(){

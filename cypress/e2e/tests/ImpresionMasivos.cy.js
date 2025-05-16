@@ -22,13 +22,10 @@ describe(ImpreNominaData.testSuites.GeneracionNominillas, () => {
          
     ImpreNominaMethods.navigateToAutenticarOk();
       
- 
- // cy.origin('https://intranetpre.educacion.org/educacion/certificados/imprenominas/Scripts/login.asp',() => {
-     Logger.stepNumber(2);
+    Logger.stepNumber(2);
     Logger.step("Introducir NIF");
     ImpreNominaMethods.signup(ImpreNominaData.NIFData.nif1);
-  //})
- 
+
     Logger.stepNumber(3);
     Logger.step('Hacer clic en "Generar Masivo" para Sistema de Generación de Nominillas');
     ImpreNominaMethods.clickOnEnviaMasivo();

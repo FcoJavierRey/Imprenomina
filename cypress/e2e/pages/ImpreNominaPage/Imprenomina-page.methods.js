@@ -25,8 +25,8 @@ static navigateToAutenticarOk() {
   }
  static signup(NifNominilla) {
     this.rellenarNIF(NifNominilla);
-    this.clickOnContinuar();
   }
+  
   static verifySignedUser(username) {
     ImpreNominaElements.signedUser.should('exist');
   }  

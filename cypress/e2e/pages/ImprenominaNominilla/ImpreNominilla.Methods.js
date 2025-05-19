@@ -1,3 +1,4 @@
+import { ImpreNominillaData } from "./ImpreNominilla.data";
 import { ImpreNominillaElements } from "./ImpreNominilla.elements";
 
 export class ImpreNominillaMethods {
@@ -17,4 +18,8 @@ export class ImpreNominillaMethods {
   static clickOnVerSeleccionarMes() {
     ImpreNominillaElements.Menu.SeleccionarMes.click()
 }
+
+ static get VerPaginaNominillaok(){
+      cy.url().should('include', '/imprimir2.asp')
+      }
 }

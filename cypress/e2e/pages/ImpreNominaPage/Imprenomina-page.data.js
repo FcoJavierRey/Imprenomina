@@ -7,6 +7,7 @@ static get url() {
     return "https://intranetpre.educacion.org/educacion/certificados/imprenominas/Scripts/login.asp";
   };
 
+  
   static get testSuites() {
     return {
       registro: "Registro",

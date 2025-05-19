@@ -22,4 +22,6 @@ export class ImpreNominillaMethods {
  static get VerPaginaNominillaok(){
       cy.url().should('include', '/imprimir2.asp')
       }
+
+        
 }

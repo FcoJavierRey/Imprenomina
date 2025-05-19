@@ -18,10 +18,9 @@ export class ImpreNominillaElements {
       },
      
       get SeleccionarMes(){
-       cy.get('input[value="Seleccionar mes"]')
+       return cy.get('input[value="Seleccionar mes"]')
       },
-
-             
+           
   }
 
   }

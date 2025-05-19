@@ -9,7 +9,7 @@ export class ImpreNominaElements {
       get BotonContinuar(){
         return cy.get('input[value="Continuar"]');
       },
-
+      
       get BotonEnviaMasivo(){
         return cy.get('input[value="Generar masivos"]');
       }

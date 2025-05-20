@@ -18,7 +18,7 @@ describe('Imprenominas: Login de usuario', ()=>{
             Logger.subStep("Hacer clic en botón Conectar");    
             LoginMethods.clickOnLoginButton();
            
-            Logger.stepNumber(4);
+            Logger.stepNumber(4); 
             Logger.subStep("Comprobar que muestra aplicación intranet Imprenominas");  
             ImpreNominaMethods.navigateToAutenticarOk();
     }

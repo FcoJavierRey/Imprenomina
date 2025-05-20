@@ -16,7 +16,6 @@ describe(ImpreNominaData.testSuites.GeneracionNominillas, () => {
     ImpreNominaMethods.navigateToImpreNomina();
     Logger.subStep("Ingresar un nombre de usuario y contraseña válidos");
     LoginMethods.login(LoginData.validCredentials.username, LoginData.validCredentials.password);
-           
     ImpreNominaMethods.navigateToAutenticarOk();
       
     Logger.stepNumber(2);
@@ -28,5 +27,17 @@ describe(ImpreNominaData.testSuites.GeneracionNominillas, () => {
     ImpreNominaMethods.clickOnEnviaMasivo();
     Logger.verification("Verificar que se muestra la página de 	Sistema de Generación de Nominillas");
     GenerarMasivoMethods.VerCajaNifNie();
+
+    Logger.stepNumber(4);
+    Logger.step('Seleccionar Documento a generar Único');
+    GenerarMasivoMethods.DocumentoGenerarUnico();
+    cy.get('[type="radio"]').check('U');
+    Logger.step('Introducir NIFs de prueba');
+    GenerarMasivoMethods.TypeOnCajaNifNie();
+    Logger.step('Pulsar Botón Generar');
+    GenerarMasivoMethods.clickOnGenerar();
+    Logger.verification("Verificar que se muestra Nómina Anterior");
+    cy.location('pathname').should('contains', 'Imprimir2.asp');
+
     });
 });

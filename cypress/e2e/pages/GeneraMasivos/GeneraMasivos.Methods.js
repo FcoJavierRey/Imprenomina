@@ -4,7 +4,7 @@ import { GenerarMasivosElements } from "./GeneraMasivos.Elements"
 export class GenerarMasivoMethods {
 
   static DocumentoGenerarUnico() {
-    GenerarMasivosElements.Menu.OpcionDocumentoGenerarUnico();
+    GenerarMasivosElements.Menu.OpcionDocumentoGenerarUnico.click();
  }
 
    static DocumentoGenerarMultiple() {
@@ -15,7 +15,7 @@ export class GenerarMasivoMethods {
  }
 
   static TypeOnCajaNifNie() {
-    GenerarMasivosElements.Menu.IntroducirConjuntoNifNie.type('val', ImpreNominaData.NIFData.nif1);
+    GenerarMasivosElements.Menu.IntroducirConjuntoNifNie.invoke("val", ImpreNominaData.NIFData.nif3);
  }
 
  static clickOnVolver() {

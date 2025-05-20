@@ -18,11 +18,11 @@ export class GenerarMasivosElements {
       },
       
       get OpcionDocumentoGenerarUnico(){
-        return cy.get('[type="radio"].XyzTypeRadio').check("2");
+        return cy.get('input[name="tipoListado"]').eq(0);
       },
      
        get OpcionDocumentoGenerarMultiple(){
-        return cy.get('[type="radio"].XyzTypeRadio').check("3");
+        return cy.get('[type="radio"].tipoListado').check("3");
       },
 
       get IntroducirConjuntoNifNie(){

@@ -44,4 +44,22 @@ describe(ImpreNominaData.testSuites.autenticacion, () => {
     Logger.verification("Verificar que se muestra un mensaje de error indicando que el inicio de sesión ha fallado");
     LoginMethods.verifyWrongPasswordMessage();
   });
+ it("ImpreNominas: NIF introducido no es correcto", () => {
+    Logger.stepNumber(1);
+    Logger.step("Navegar a la página de inicio de sesión");
+    ImpreNominaMethods.navigateToImpreNomina();
+    Logger.step("Iniciar sesión en ImpreNomina"); 
+    LoginMethods.login(LoginData.validCredentials.username, LoginData.validCredentials.password);
+       Logger.subStep("Navegar a la página de intranet");
+    ImpreNominaMethods.navigateToAutenticarOk();
+   
+    Logger.stepNumber(2);
+    Logger.step("Introducir NIF Erróneo");
+    ImpreNominaMethods.signup(ImpreNominaData.NIFData.nif4);
+    Logger.step('Hacer clic en "Continuar" para Impresión de Nominillas');
+    ImpreNominaMethods.clickOnContinuar();
+    Logger.verification("Verificar que se muestra un mensaje de error indicando que el NIF no es correcto");
+     ImpreNominaMethods.verifyNIF();
+  });
+
 });

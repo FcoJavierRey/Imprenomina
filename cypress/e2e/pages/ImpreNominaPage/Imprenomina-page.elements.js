@@ -25,4 +25,7 @@ static get signedUser() {
     return cy.contains('p', 'Credenciales inválidas. ');
   }
   
+  static get invalidNIF(){
+    return cy.contains('p', 'El NIF introducido no es correcto');
+  }
 }

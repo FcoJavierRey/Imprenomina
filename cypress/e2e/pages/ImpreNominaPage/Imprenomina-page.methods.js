@@ -36,6 +36,11 @@ static navigateToAutenticarOk() {
     
   }
 
+  static verifyNIF() {
+    ImpreNominaElements.invalidNIF.should('exist');
+    
+  }
+
   static generateRandomString(length = 10) {
     let result = "";
     const characters = "abcdefghijklmnopqrstuvwxyz0123456789";

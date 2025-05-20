@@ -25,7 +25,7 @@ describe(ImpreNominaData.testSuites.GeneracionNominillas, () => {
     Logger.stepNumber(3);
     Logger.step('Hacer clic en "Generar Masivo" para Sistema de Generación de Nominillas');
     ImpreNominaMethods.clickOnEnviaMasivo();
-    Logger.verification("Verificar que se muestra la página de 	Sistema de Generación de Nominillas");
+    Logger.verification("Verificar que se muestra la página de Sistema de Generación de Nominillas");
     GenerarMasivoMethods.VerCajaNifNie();
 
     Logger.stepNumber(4);
@@ -57,7 +57,7 @@ describe(ImpreNominaData.testSuites.GeneracionNominillas, () => {
     Logger.stepNumber(3);
     Logger.step('Hacer clic en "Generar Masivo" para Sistema de Generación de Nominillas');
     ImpreNominaMethods.clickOnEnviaMasivo();
-    Logger.verification("Verificar que se muestra la página de 	Sistema de Generación de Nominillas");
+    Logger.verification("Verificar que se muestra la página de Sistema de Generación de Nominillas");
     GenerarMasivoMethods.VerCajaNifNie();
 
     Logger.stepNumber(4);
@@ -68,7 +68,7 @@ describe(ImpreNominaData.testSuites.GeneracionNominillas, () => {
     GenerarMasivoMethods.TypeOnCajaNifNie();
     Logger.step('Pulsar Botón Generar');
     GenerarMasivoMethods.clickOnGenerar();
-    Logger.verification("Verificar que se Los documentos se han generado correctamente");
+    Logger.verification("Verificar que se los documentos se han generado correctamente");
     cy.location('pathname').should('contains', 'Imprimir3.asp');
 
     });

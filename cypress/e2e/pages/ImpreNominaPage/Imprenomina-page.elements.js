@@ -28,4 +28,11 @@ static get signedUser() {
   static get invalidNIF(){
     return cy.contains('p', 'El NIF introducido no es correcto');
   }
+
+   static get invalidDatos(){
+    return cy.contains('p', 'No existen datos para el periodo especificado.');
+  }
+
+  
+
 }

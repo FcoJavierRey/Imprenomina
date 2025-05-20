@@ -79,7 +79,7 @@ describe(ImpreNominaData.testSuites.ImpresionNominillas, () => {
     ImpreNominillaMethods.VerRetencionesBoton();
 
     Logger.stepNumber(4);
-    Logger.step('Hacer clic en "Ver Retenciones"');
+    Logger.step('Hacer clic en "Ver Nominilla"');
     ImpreNominillaMethods.clickOnVerNominilla();
     Logger.verification("Verificar que se muestra la página de Nominilla");
     cy.location('pathname').should('contains', 'imprimir2.asp');

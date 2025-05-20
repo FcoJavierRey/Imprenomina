@@ -8,7 +8,7 @@ export class GenerarMasivoMethods {
  }
 
    static DocumentoGenerarMultiple() {
-    GenerarMasivosElements.Menu.OpcionDocumentoGenerarMultiple();
+    GenerarMasivosElements.Menu.OpcionDocumentoGenerarMultiple.click();
  }
   static VerCajaNifNie() {
     GenerarMasivosElements.Menu.IntroducirConjuntoNifNie.should('exist');
@@ -16,6 +16,10 @@ export class GenerarMasivoMethods {
 
   static TypeOnCajaNifNie() {
     GenerarMasivosElements.Menu.IntroducirConjuntoNifNie.invoke("val", ImpreNominaData.NIFData.nif3);
+ }
+
+ static TypeOnCajaNifNieWrong() {
+    GenerarMasivosElements.Menu.IntroducirConjuntoNifNie.invoke("val", ImpreNominaData.NIFData.nif4);
  }
 
  static clickOnVolver() {

@@ -22,7 +22,7 @@ export class GenerarMasivosElements {
       },
      
        get OpcionDocumentoGenerarMultiple(){
-        return cy.get('[type="radio"].tipoListado').check("3");
+        return cy.get('input[name="tipoListado"]').eq(1);
       },
 
       get IntroducirConjuntoNifNie(){

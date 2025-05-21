@@ -68,7 +68,7 @@ describe(ImpreNominaData.testSuites.GeneracionNominillas, () => {
     GenerarMasivoMethods.TypeOnCajaNifNie();
     Logger.step('Pulsar Botón Generar');
     GenerarMasivoMethods.clickOnGenerar();
-    Logger.verification("Verificar que se los documentos se han generado correctamente");
+    Logger.verification("Verificar que los documentos se han generado correctamente");
     cy.location('pathname').should('contains', 'Imprimir3.asp');
 
     });
